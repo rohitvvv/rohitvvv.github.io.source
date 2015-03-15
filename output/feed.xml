@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ROHIT</title>
+    <link>http://jbake.org</link>
+    <atom:link href="http://jbake.org/feed.xml" rel="self" type="application/rss+xml" />
+    <description>JBake Bootstrap Template</description>
+    <language>en-gb</language>
+    <pubDate>Sun, 15 Mar 2015 18:15:27 +0530</pubDate>
+    <lastBuildDate>Sun, 15 Mar 2015 18:15:27 +0530</lastBuildDate>
+
+    <item>
+      <title>JavaFX Introduction</title>
+      <link>http://jbake.org/blog/2015/JavaFX-Introduction.html</link>
+      <pubDate>Sun, 15 Mar 2015 00:00:00 +0530</pubDate>
+      <guid isPermaLink="false">blog/2015/JavaFX-Introduction.html</guid>
+      	<description>
+	
+&lt;p&gt;&lt;b&gt;JavaFX&lt;/b&gt; is a software platform for creating Rich Internet Applications that can run across variety of platforms[1].It
+has a collection of Java Packages with ability to add fancy GUI to your Java application. 
+JavaFX is official standard part of Java platform. JavaFX is considered as a successor of Swing
+and can be easily understood by a Swing developer. You can get the latest in JavaFX in early access preview 
+of JavaFX in &lt;a href=&quot;https://jdk8.java.net/download.html&quot;&gt;Java 8 EA 40&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;History:&lt;/b&gt; Formerly it was called in F3(Form Follows function) and developed by Oliver Smith at Sun 
+    Microsystems. JavaFX was initially developed as a scripting language however it was later 
+    discontinued by Oracle and declared dead in Java One 2010. Now JavaFX has a clean Java API. 
+
+&lt;p&gt;
+    &lt;b&gt;JavaFX Lingo&lt;/b&gt;
+In order to understand JavaFX well one needs to familiarize with the Jargon used
+&lt;ul&gt;
+    &lt;li&gt;Stage - Top level container for all Java Objects&lt;/li&gt;
+    &lt;li&gt;Scene - A scene is a hierarchical node structure that contains all scenes components&lt;/li&gt;
+    &lt;li&gt;Group - Group is a general purpose container node&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Stage:&lt;/b&gt; Stage is implicitly created by JavaFX. JavaFX makes you think like a designer and 
+stage is where you will host your scene&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Scene:&lt;/b&gt;A scene is a hierarchical node structures that contains all scene’s components&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Group:&lt;/b&gt;Group is general purpose container node. This is analogous to a layout creates&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Various possibilities with JavaFX&lt;/b&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;CSS Support&lt;/li&gt;
+&lt;li&gt;Visual Effects: Shadow,reflect,blur perspective&lt;/li&gt;
+&lt;li&gt;Animation- rotate,scale,translate etc&lt;/li&gt;
+&lt;li&gt;Chars&lt;/li&gt;
+&lt;li&gt;3D Object - cubes,cylinder,spheres etc&lt;/li&gt;
+&lt;li&gt;Touch Interface&lt;/li&gt;
+&lt;li&gt;Property bindings&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;b&gt;JavaFX Application Life Cycle&lt;/b&gt;
+&lt;ol&gt;
+    &lt;li&gt;init (): Default implementation of init does nothing. 
+        One can override to perform any processing before application UI is displayed&lt;/li&gt;
+&lt;li&gt;start (): No default implementation and is declared abstract. 
+    Your app must override this. Build and display the UI&lt;/li&gt;
+&lt;li&gt;Wait for application to End. Typically happens when user signals end of program&lt;/li&gt;
+&lt;li&gt;stop(): Default implementation does not do anything
+    One can override to to perform any necessary processing as program terminates&lt;/li&gt; 
+&lt;ul&gt;
+
+&lt;pre class=&quot;prettyprint&quot;&gt;
+&lt;code&gt;
+
+package sampleapplication;
+
+import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
+
+/**
+ *
+ * @author rvvaidya
+ */
+public class SampleApplication extends Application {
+    
+    @Override
+    public void start(Stage primaryStage) {
+        Button btn = new Button();
+        btn.setText(&quot;Say &apos;Hello World&apos;&quot;);
+        btn.setOnAction(new EventHandler&lt;ActionEvent&gt;() {
+            
+            @Override
+            public void handle(ActionEvent event) {
+                System.out.println(&quot;Hello World!&quot;);
+            }
+        });
+        
+        StackPane root = new StackPane();
+        root.getChildren().add(btn);
+        
+        Scene scene = new Scene(root, 300, 250);
+        
+        primaryStage.setTitle(&quot;Hello World!&quot;);
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        launch(args);
+    }
+    
+}
+
+&lt;/code&gt;
+
+&lt;/pre&gt;
+    &lt;P&gt;&lt;b&gt;Code Walk through&lt;/b&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Any JavaFX application must extend javafx.application.Application&lt;/li&gt;
+    &lt;li&gt;The start method is overriden. The override also passes the Stage object&lt;/li&gt;   
+    &lt;li&gt;Button object is instantiated and event handler is associated&lt;/li&gt;
+    &lt;li&gt;A stack pane is created. This is a layout and corresponds to the group&lt;/li&gt;
+    &lt;li&gt;Create the Scene object and pass the group reference &lt;/li&gt;
+    &lt;li&gt;The scene is hosted on the stage&lt;/li&gt;
+    &lt;li&gt;In main (the main entry point for java application) launch is called. This launches
+        the JavaFX application.&lt;/li&gt;&lt;/ul&gt; 
+&lt;/P&gt;
+
+
+	</description>
+    </item>
+
+  </channel> 
+</rss>

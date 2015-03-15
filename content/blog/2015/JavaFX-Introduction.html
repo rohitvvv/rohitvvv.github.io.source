@@ -1,0 +1,119 @@
+title=JavaFX Introduction
+date=2015-03-15
+type=post
+tags=blog
+status=published
+~~~~~~
+
+<p><b>JavaFX</b> is a software platform for creating Rich Internet Applications that can run across variety of platforms[1].It
+has a collection of Java Packages with ability to add fancy GUI to your Java application. 
+JavaFX is official standard part of Java platform. JavaFX is considered as a successor of Swing
+and can be easily understood by a Swing developer. You can get the latest in JavaFX in early access preview 
+of JavaFX in <a href="https://jdk8.java.net/download.html">Java 8 EA 40</a></p>
+
+<p><b>History:</b> Formerly it was called in F3(Form Follows function) and developed by Oliver Smith at Sun 
+    Microsystems. JavaFX was initially developed as a scripting language however it was later 
+    discontinued by Oracle and declared dead in Java One 2010. Now JavaFX has a clean Java API. 
+
+<p>
+    <b>JavaFX Lingo</b>
+In order to understand JavaFX well one needs to familiarize with the Jargon used
+<ul>
+    <li>Stage - Top level container for all Java Objects</li>
+    <li>Scene - A scene is a hierarchical node structure that contains all scenes components</li>
+    <li>Group - Group is a general purpose container node</li>
+</ul>
+</p>
+<p><b>Stage:</b> Stage is implicitly created by JavaFX. JavaFX makes you think like a designer and 
+stage is where you will host your scene</p>
+<p><b>Scene:</b>A scene is a hierarchical node structures that contains all scene’s components</p>
+<p><b>Group:</b>Group is general purpose container node. This is analogous to a layout creates</p>
+
+<p><b>Various possibilities with JavaFX</b></p>
+<ul>
+<li>CSS Support</li>
+<li>Visual Effects: Shadow,reflect,blur perspective</li>
+<li>Animation- rotate,scale,translate etc</li>
+<li>Chars</li>
+<li>3D Object - cubes,cylinder,spheres etc</li>
+<li>Touch Interface</li>
+<li>Property bindings</li>
+</ul>
+
+<b>JavaFX Application Life Cycle</b>
+<ol>
+    <li>init (): Default implementation of init does nothing. 
+        One can override to perform any processing before application UI is displayed</li>
+<li>start (): No default implementation and is declared abstract. 
+    Your app must override this. Build and display the UI</li>
+<li>Wait for application to End. Typically happens when user signals end of program</li>
+<li>stop(): Default implementation does not do anything
+    One can override to to perform any necessary processing as program terminates</li> 
+<ul>
+
+<pre class="prettyprint">
+<code>
+
+package sampleapplication;
+
+import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
+
+/**
+ *
+ * @author rvvaidya
+ */
+public class SampleApplication extends Application {
+    
+    @Override
+    public void start(Stage primaryStage) {
+        Button btn = new Button();
+        btn.setText("Say 'Hello World'");
+        btn.setOnAction(new EventHandler<ActionEvent>() {
+            
+            @Override
+            public void handle(ActionEvent event) {
+                System.out.println("Hello World!");
+            }
+        });
+        
+        StackPane root = new StackPane();
+        root.getChildren().add(btn);
+        
+        Scene scene = new Scene(root, 300, 250);
+        
+        primaryStage.setTitle("Hello World!");
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        launch(args);
+    }
+    
+}
+
+</code>
+
+</pre>
+    <P><b>Code Walk through</b>
+    <ul>
+        <li>Any JavaFX application must extend javafx.application.Application</li>
+    <li>The start method is overriden. The override also passes the Stage object</li>   
+    <li>Button object is instantiated and event handler is associated</li>
+    <li>A stack pane is created. This is a layout and corresponds to the group</li>
+    <li>Create the Scene object and pass the group reference </li>
+    <li>The scene is hosted on the stage</li>
+    <li>In main (the main entry point for java application) launch is called. This launches
+        the JavaFX application.</li></ul> 
+</P>
+
+
