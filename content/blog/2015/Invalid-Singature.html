@@ -1,0 +1,67 @@
+title=Invalid signature file digest - Maven solution 
+date=2015-03-24
+type=post
+tags=blog
+status=published
+~~~~~~
+Are you getting this exception ?
+<pre class="prettyprint">
+<code>
+Error: A JNI error has occurred, please check your installation and try again
+Exception in thread "main" java.lang.SecurityException: Invalid signature file digest for Manifest main attributes
+	at sun.security.util.SignatureFileVerifier.processImpl(SignatureFileVerifier.java:284)
+	at sun.security.util.SignatureFileVerifier.process(SignatureFileVerifier.java:238)
+	at java.util.jar.JarVerifier.processEntry(JarVerifier.java:273)
+	at java.util.jar.JarVerifier.update(JarVerifier.java:228)
+	at java.util.jar.JarFile.initializeVerifier(JarFile.java:383)
+</code>
+</pre>
+
+<p>If you a mere mortal like I am and have got this SecurityException after adding a maven repository read on. 
+    The most basic cause of such a exception is some dependency define in pom.xml is pulling in jars which are singed. After building your application unzip the final jar that gets created for your application. 
+<p>
+    In my case its GitFx-1.0-SNAPSHOT.jar. Unzip GitFx-1.0-SNAPSHOT.jar or
+    do a jar -xvf GitFx-1.0-SNAPSHOT.jar. Inspect the META_INF folder. 
+    You will find <b>.RSA,.SF or .DSA</b> present under META_INF. This is signed information. The best way to explain why one gets the exception at runtime is “Some of your dependencies are likely signed jarfiles. When you combine them all into one big jarfile, the corresponding signatures are no longer valid so the runtime halts.”  - StackOverflow Answer[1] 
+</p>
+Solution to fix this with <b>maven-dependency-plugin</b>. Small snippet of code in my pom.xml. 
+
+<pre class="prettyprint linenums lang-xml"><span style="color:#ee3030;"></span>
+&lt;plugin&gt;
+    &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+    &lt;artifactId&gt;maven-dependency-plugin&lt;/artifactId&gt;
+    &lt;version&gt;2.6&lt;/version&gt;
+    &lt;executions&gt;
+        &lt;execution&gt;
+            &lt;id&gt;unpack-dependencies&lt;/id&gt;
+            &lt;phase&gt;package&lt;/phase&gt;
+            &lt;goals&gt;
+                &lt;goal&gt;unpack-dependencies&lt;/goal&gt;
+            &lt;/goals&gt;
+            &lt;configuration&gt;
+                &lt;excludeScope&gt;system&lt;/excludeScope&gt;
+                &lt;excludes&gt;META-INF/*.SF&lt;/excludes&gt;
+                &lt;excludes&gt;META-INF/*.DSA&lt;/excludes&gt;
+                &lt;excludes&gt;META-INF/*.RSA&lt;/excludes&gt;
+                &lt;excludeGroupIds&gt;junit,org.mockito,org.hamcrest&lt;/excludeGroupIds&gt;
+                &lt;outputDirectory&gt;${project.build.directory}/classes&lt;/outputDirectory&gt;
+            &lt;/configuration&gt;
+        &lt;/execution&gt;
+    &lt;/executions&gt;
+&lt;/plugin&gt;
+
+</pre>
+Line # 15,16 and 17 is where we prevent the signed information from going into our final consolidated jar file. 
+<P>Some more information about the plugins configuration can be found  
+    <a href="https://maven.apache.org/plugins/maven-dependency-plugin/examples/unpacking-artifacts.html">here[2]</a>
+</P>
+Hope this helps :) 
+<P>
+    <b> References:</b>
+<ol>
+    <li><a href="http://stackoverflow.com/questions/999489/invalid-signature-file-when-attempting-to-run-a-jar">Stack OverFlow</a></li>
+    <li><a href="https://maven.apache.org/plugins/maven-dependency-plugin/examples/unpacking-artifacts.html">Apache Maven - Unpacking Specific Artifacts</a></li>
+</ol>
+
+
+
