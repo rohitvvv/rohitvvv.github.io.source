@@ -6,9 +6,116 @@
     <atom:link href="http://jbake.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>JBake Bootstrap Template</description>
     <language>en-gb</language>
-    <pubDate>Sun, 15 Mar 2015 18:15:27 +0530</pubDate>
-    <lastBuildDate>Sun, 15 Mar 2015 18:15:27 +0530</lastBuildDate>
+    <pubDate>Wed, 15 Apr 2015 19:26:06 +0530</pubDate>
+    <lastBuildDate>Wed, 15 Apr 2015 19:26:06 +0530</lastBuildDate>
 
+    <item>
+      <title>Contributing to Open Source</title>
+      <link>http://jbake.org/blog/2015/Open-source-contribution.html</link>
+      <pubDate>Wed, 15 Apr 2015 00:00:00 +0530</pubDate>
+      <guid isPermaLink="false">blog/2015/Open-source-contribution.html</guid>
+      	<description>
+	How does one contribute to open source? 
+&lt;ol&gt;
+    &lt;li&gt;There are multiple projects online on &lt;a href=&quot;https://github.com/&quot;&gt;github&lt;/a&gt; and &lt;a href=&quot;https://bitbucket.org&quot;&gt;  bitbucket&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;Choose One. Finding choosing difficult? goto 4. If you don&apos;t like any, goto 3&lt;/li&gt;
+    &lt;li&gt;Create a new repository assuming you have a brilliant/dumb idea. Blog about it &amp; let friends know.&lt;/li&gt;
+    &lt;li&gt;Join a User Group. Mingle to find projects people are working on. Chances are less that you are in Hyderabad but in case if you are join us &lt;a&gt;http://jughyderabad.in/&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;Fork the repository of your liking. Liking is a overloaded term. It may signify language, interest, philosophy ...&lt;/li&gt;
+    &lt;li&gt;Check the issue list of the project you liked/forked. If you don&apos;t understand anything goto 7 else goto 8&lt;/li&gt;
+    &lt;li&gt;Subscribe to project mailing list or ask questions on IRC channel of the project&lt;/li&gt;
+    &lt;li&gt;Request that the issue be assigned to you&lt;/li&gt;
+    &lt;li&gt;Read the Readme and How to contribute section in the repository. You may need to understand gerrit/jira.Read!&lt;/li&gt; 
+    &lt;li&gt;Fix the issue in your forked branch&lt;/li&gt;
+    &lt;li&gt;Run the tests for that project. See if all pass! this is important. If there no tests, create. &lt;/li&gt;
+    &lt;li&gt;Create a pull request to sumbit your patch&lt;/li&gt;
+    &lt;li&gt;Party if your pull request gets accepted. If not go back to 6 or 1 based on your motivation levels&lt;/li&gt;
+&lt;/ol&gt;
+
+    
+Every open source project is in different stages of development. A mature project with thousands of developers will take weeks if not months for your code to be reviewed and incorporated.
+A beginner project will almost instantaneously accept your pull request.
+You can be part of both as you can learn good coding practices in a mature project and apply them to your pet project or any open source project you would like to be associated with.
+Most important have fun.Good luck. 
+&lt;p&gt;&amp;nbsp&lt;/p&gt;
+&lt;p&gt;Choose &lt;a href=&quot;https://github.com/rohitvvv/GitFx&quot;&gt;GitFx&lt;/a&gt; if you want to work on JavaFX&lt;/p&gt;
+&lt;p align=&apos;right&apos;&gt;--Rohit Vaidya&lt;/p&gt;
+
+	</description>
+    </item>
+    <item>
+      <title>Invalid signature file digest - Maven solution </title>
+      <link>http://jbake.org/blog/2015/Invalid-Singature.html</link>
+      <pubDate>Tue, 24 Mar 2015 00:00:00 +0530</pubDate>
+      <guid isPermaLink="false">blog/2015/Invalid-Singature.html</guid>
+      	<description>
+	Are you getting this exception ?
+&lt;pre class=&quot;prettyprint&quot;&gt;
+&lt;code&gt;
+Error: A JNI error has occurred, please check your installation and try again
+Exception in thread &quot;main&quot; java.lang.SecurityException: Invalid signature file digest for Manifest main attributes
+	at sun.security.util.SignatureFileVerifier.processImpl(SignatureFileVerifier.java:284)
+	at sun.security.util.SignatureFileVerifier.process(SignatureFileVerifier.java:238)
+	at java.util.jar.JarVerifier.processEntry(JarVerifier.java:273)
+	at java.util.jar.JarVerifier.update(JarVerifier.java:228)
+	at java.util.jar.JarFile.initializeVerifier(JarFile.java:383)
+&lt;/code&gt;
+&lt;/pre&gt;
+
+&lt;p&gt;If you a mere mortal like I am and have got this SecurityException after adding a maven repository read on. 
+    The most basic cause of such a exception is some dependency define in pom.xml is pulling in jars which are singed. After building your application unzip the final jar that gets created for your application. 
+&lt;p&gt;
+    In my case its GitFx-1.0-SNAPSHOT.jar. Unzip GitFx-1.0-SNAPSHOT.jar or
+    do a jar -xvf GitFx-1.0-SNAPSHOT.jar. Inspect the META_INF folder. 
+    You will find &lt;b&gt;.RSA,.SF or .DSA&lt;/b&gt; present under META_INF. This is signed information. The best way to explain why one gets the exception at runtime is “Some of your dependencies are likely signed jarfiles. When you combine them all into one big jarfile, the corresponding signatures are no longer valid so the runtime halts.”  - StackOverflow Answer[1] 
+&lt;/p&gt;
+Solution to fix this with &lt;b&gt;maven-dependency-plugin&lt;/b&gt;. Small snippet of code in my pom.xml. 
+
+&lt;pre class=&quot;prettyprint linenums lang-xml&quot;&gt;&lt;span style=&quot;color:#ee3030;&quot;&gt;&lt;/span&gt;
+&amp;lt;plugin&amp;gt;
+    &amp;lt;groupId&amp;gt;org.apache.maven.plugins&amp;lt;/groupId&amp;gt;
+    &amp;lt;artifactId&amp;gt;maven-dependency-plugin&amp;lt;/artifactId&amp;gt;
+    &amp;lt;version&amp;gt;2.6&amp;lt;/version&amp;gt;
+    &amp;lt;executions&amp;gt;
+        &amp;lt;execution&amp;gt;
+            &amp;lt;id&amp;gt;unpack-dependencies&amp;lt;/id&amp;gt;
+            &amp;lt;phase&amp;gt;package&amp;lt;/phase&amp;gt;
+            &amp;lt;goals&amp;gt;
+                &amp;lt;goal&amp;gt;unpack-dependencies&amp;lt;/goal&amp;gt;
+            &amp;lt;/goals&amp;gt;
+            &amp;lt;configuration&amp;gt;
+                &amp;lt;excludeScope&amp;gt;system&amp;lt;/excludeScope&amp;gt;
+                &amp;lt;excludes&amp;gt;META-INF/*.SF&amp;lt;/excludes&amp;gt;
+                &amp;lt;excludes&amp;gt;META-INF/*.DSA&amp;lt;/excludes&amp;gt;
+                &amp;lt;excludes&amp;gt;META-INF/*.RSA&amp;lt;/excludes&amp;gt;
+                &amp;lt;excludeGroupIds&amp;gt;junit,org.mockito,org.hamcrest&amp;lt;/excludeGroupIds&amp;gt;
+                &amp;lt;outputDirectory&amp;gt;${project.build.directory}/classes&amp;lt;/outputDirectory&amp;gt;
+            &amp;lt;/configuration&amp;gt;
+        &amp;lt;/execution&amp;gt;
+    &amp;lt;/executions&amp;gt;
+&amp;lt;/plugin&amp;gt;
+
+&lt;/pre&gt;
+Line # 15,16 and 17 is where we prevent the signed information from going into our final consolidated jar file. 
+&lt;P&gt;Some more information about the plugins configuration can be found  
+    &lt;a href=&quot;https://maven.apache.org/plugins/maven-dependency-plugin/examples/unpacking-artifacts.html&quot;&gt;here[2]&lt;/a&gt;
+&lt;/P&gt;
+Hope this helps :) 
+&lt;P&gt;
+    &lt;b&gt; References:&lt;/b&gt;
+&lt;ol&gt;
+    &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/999489/invalid-signature-file-when-attempting-to-run-a-jar&quot;&gt;Stack OverFlow&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;https://maven.apache.org/plugins/maven-dependency-plugin/examples/unpacking-artifacts.html&quot;&gt;Apache Maven - Unpacking Specific Artifacts&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;!-- begin htmlcommentbox.com --&gt;
+ &lt;div id=&quot;HCB_comment_box&quot;&gt;&lt;a href=&quot;http://www.htmlcommentbox.com&quot;&gt;Comment Box&lt;/a&gt; is loading comments...&lt;/div&gt;
+ &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;//www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0&quot; /&gt;
+ &lt;script type=&quot;text/javascript&quot; id=&quot;hcb&quot;&gt; /*&lt;!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement(&quot;script&quot;), l=(&quot;&quot;+window.location).replace(/&apos;/g,&quot;%27&quot;) || hcb_user.PAGE, h=&quot;//www.htmlcommentbox.com&quot;;s.setAttribute(&quot;type&quot;,&quot;text/javascript&quot;);s.setAttribute(&quot;src&quot;, h+&quot;/jread?page=&quot;+encodeURIComponent(l).replace(&quot;+&quot;,&quot;%2B&quot;)+&quot;&amp;opts=16862&amp;num=10&quot;);if (typeof s!=&quot;undefined&quot;) document.getElementsByTagName(&quot;head&quot;)[0].appendChild(s);})(); /*--&gt;*/ &lt;/script&gt;
+&lt;!-- end htmlcommentbox.com --&gt;
+
+	</description>
+    </item>
     <item>
       <title>JavaFX Introduction</title>
       <link>http://jbake.org/blog/2015/JavaFX-Introduction.html</link>
@@ -21,7 +128,6 @@ has a collection of Java Packages with ability to add fancy GUI to your Java app
 JavaFX is official standard part of Java platform. JavaFX is considered as a successor of Swing
 and can be easily understood by a Swing developer. You can get the latest in JavaFX in early access preview 
 of JavaFX in &lt;a href=&quot;https://jdk8.java.net/download.html&quot;&gt;Java 8 EA 40&lt;/a&gt;&lt;/p&gt;
-
 &lt;p&gt;&lt;b&gt;History:&lt;/b&gt; Formerly it was called in F3(Form Follows function) and developed by Oliver Smith at Sun 
     Microsystems. JavaFX was initially developed as a scripting language however it was later 
     discontinued by Oracle and declared dead in Java One 2010. Now JavaFX has a clean Java API. 
@@ -126,7 +232,11 @@ public class SampleApplication extends Application {
     &lt;li&gt;In main (the main entry point for java application) launch is called. This launches
         the JavaFX application.&lt;/li&gt;&lt;/ul&gt; 
 &lt;/P&gt;
-
+&lt;!-- begin htmlcommentbox.com --&gt;
+&lt;div id=&quot;HCB_comment_box&quot;&gt;&lt;a href=&quot;http://www.htmlcommentbox.com&quot;&gt;Comment Form&lt;/a&gt; is loading comments...&lt;/div&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;//www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0&quot; /&gt;
+&lt;script type=&quot;text/javascript&quot; id=&quot;hcb&quot;&gt; /*&lt;!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement(&quot;script&quot;), l=(&quot;&quot;+window.location).replace(/&apos;/g,&quot;%27&quot;) || hcb_user.PAGE, h=&quot;//www.htmlcommentbox.com&quot;;s.setAttribute(&quot;type&quot;,&quot;text/javascript&quot;);s.setAttribute(&quot;src&quot;, h+&quot;/jread?page=&quot;+encodeURIComponent(l).replace(&quot;+&quot;,&quot;%2B&quot;)+&quot;&amp;opts=16862&amp;num=10&quot;);if (typeof s!=&quot;undefined&quot;) document.getElementsByTagName(&quot;head&quot;)[0].appendChild(s);})(); /*--&gt;*/ &lt;/script&gt;
+&lt;!-- end htmlcommentbox.com --&gt;
 
 	</description>
     </item>
