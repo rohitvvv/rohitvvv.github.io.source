@@ -6,9 +6,54 @@
     <atom:link href="http://jbake.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>JBake Bootstrap Template</description>
     <language>en-gb</language>
-    <pubDate>Wed, 15 Apr 2015 20:14:52 +0530</pubDate>
-    <lastBuildDate>Wed, 15 Apr 2015 20:14:52 +0530</lastBuildDate>
+    <pubDate>Sat, 20 Jun 2015 14:48:12 +0530</pubDate>
+    <lastBuildDate>Sat, 20 Jun 2015 14:48:12 +0530</lastBuildDate>
 
+    <item>
+      <title>My Emacs CheatSheet</title>
+      <link>http://jbake.org/blog/2015/Emacs-CheatSheet.html</link>
+      <pubDate>Sat, 20 Jun 2015 00:00:00 +0530</pubDate>
+      <guid isPermaLink="false">blog/2015/Emacs-CheatSheet.html</guid>
+      	<description>
+	
+&lt;p&gt;This is my Emacs cheat sheet.  
+&lt;pre class=&quot;prettyprint&quot;&gt;
+&lt;code&gt;
+Note: If you are new to emacs C - Ctrl M - Esc key. &apos;-&apos; indicates simultaneous key press
+To split a window vertically C-x 3
+To split a window horizontally C-x 2
+To kill a buffer C-x-0
+To swtich between buffers: C-x-o
+To save C-x-s
+To open a new file: C-x-f
+To undo C-/
+To switch buffers: C-x-b. This will show a list of buffers. Switch to the buffer by selecting the buffer. 
+To open a shell: M-x shell
+To play tetris : M-x tetris
+To kill a line: C-k
+To Paste: C-y pastes last kill text. Kill with C-k
+To Cut kill next word M-d
+To Cut sentence M-k
+To copy a selected region M-w 
+To move end of buffer M-&gt;
+To move to beginning of buffer M-&lt;
+To move forward 4 lines C-u C-n
+To move forward 16 lnes C-u C-u C-n
+To jump to specified line M g g 
+To search incrementally C-s (C-s again to search)
+To start org-mode M-x org-mode
+To search and replace C-% enter ! to replace all the occurences. y to replace current. n to skip and q to quit
+To add deadline to todo item in org mode C-c-d
+To open browser in emacs M-w eww [return] Type the URL
+To tweet using emacs &lt;a href=&quot;http://emacswiki.org/emacs/TwitteringMode&quot;&gt;Twittering Mode&lt;/a&gt; E-w twit 
+To talk to a doctor M-w doctor
+&lt;/code&gt;
+
+&lt;/pre&gt;
+&lt;!-- end htmlcommentbox.com --&gt;
+
+	</description>
+    </item>
     <item>
       <title>Contributing to Open Source</title>
       <link>http://jbake.org/blog/2015/Open-source-contribution.html</link>
