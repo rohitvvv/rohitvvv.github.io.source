@@ -6,8 +6,8 @@
     <atom:link href="http://jbake.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>JBake Bootstrap Template</description>
     <language>en-gb</language>
-    <pubDate>Sat, 20 Jun 2015 14:48:12 +0530</pubDate>
-    <lastBuildDate>Sat, 20 Jun 2015 14:48:12 +0530</lastBuildDate>
+    <pubDate>Sun, 21 Jun 2015 18:40:29 +0530</pubDate>
+    <lastBuildDate>Sun, 21 Jun 2015 18:40:29 +0530</lastBuildDate>
 
     <item>
       <title>My Emacs CheatSheet</title>
@@ -46,10 +46,23 @@ To search and replace C-% enter ! to replace all the occurences. y to replace cu
 To add deadline to todo item in org mode C-c-d
 To open browser in emacs M-w eww [return] Type the URL
 To tweet using emacs &lt;a href=&quot;http://emacswiki.org/emacs/TwitteringMode&quot;&gt;Twittering Mode&lt;/a&gt; E-w twit 
-To talk to a doctor M-w doctor
+To talk to a doctor M-w doctor 
 &lt;/code&gt;
-
 &lt;/pre&gt;
+&lt;div id=&quot;disqus_thread&quot;&gt;&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = &apos;rohitvvvinfo&apos;;
+    
+    /* * * DON&apos;T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement(&apos;script&apos;); dsq.type = &apos;text/javascript&apos;; dsq.async = true;
+        dsq.src = &apos;//&apos; + disqus_shortname + &apos;.disqus.com/embed.js&apos;;
+        (document.getElementsByTagName(&apos;head&apos;)[0] || document.getElementsByTagName(&apos;body&apos;)[0]).appendChild(dsq);
+    })();
+&lt;/script&gt;
+&lt;noscript&gt;Please enable JavaScript to view the &lt;a href=&quot;https://disqus.com/?ref_noscript&quot; rel=&quot;nofollow&quot;&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
+
 &lt;!-- end htmlcommentbox.com --&gt;
 
 	</description>
@@ -90,7 +103,7 @@ Most important have fun.Good luck.
 	</description>
     </item>
     <item>
-      <title>Invalid signature file digest - Maven solution </title>
+      <title>Invalid Signature file digest - Maven solution </title>
       <link>http://jbake.org/blog/2015/Invalid-Singature.html</link>
       <pubDate>Tue, 24 Mar 2015 00:00:00 +0530</pubDate>
       <guid isPermaLink="false">blog/2015/Invalid-Singature.html</guid>
