@@ -6,8 +6,8 @@
     <atom:link href="http://jbake.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>JBake Bootstrap Template</description>
     <language>en-gb</language>
-    <pubDate>Sun, 21 Jun 2015 18:40:29 +0530</pubDate>
-    <lastBuildDate>Sun, 21 Jun 2015 18:40:29 +0530</lastBuildDate>
+    <pubDate>Sun, 21 Jun 2015 18:52:09 +0530</pubDate>
+    <lastBuildDate>Sun, 21 Jun 2015 18:52:09 +0530</lastBuildDate>
 
     <item>
       <title>My Emacs CheatSheet</title>
@@ -290,12 +290,20 @@ public class SampleApplication extends Application {
     &lt;li&gt;The scene is hosted on the stage&lt;/li&gt;
     &lt;li&gt;In main (the main entry point for java application) launch is called. This launches
         the JavaFX application.&lt;/li&gt;&lt;/ul&gt; 
+&lt;div id=&quot;disqus_thread&quot;&gt;&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = &apos;rohitvvvinfo&apos;;
+    
+    /* * * DON&apos;T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement(&apos;script&apos;); dsq.type = &apos;text/javascript&apos;; dsq.async = true;
+        dsq.src = &apos;//&apos; + disqus_shortname + &apos;.disqus.com/embed.js&apos;;
+        (document.getElementsByTagName(&apos;head&apos;)[0] || document.getElementsByTagName(&apos;body&apos;)[0]).appendChild(dsq);
+    })();
+&lt;/script&gt;
+&lt;noscript&gt;Please enable JavaScript to view the &lt;a href=&quot;https://disqus.com/?ref_noscript&quot; rel=&quot;nofollow&quot;&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
 &lt;/P&gt;
-&lt;!-- begin htmlcommentbox.com --&gt;
-&lt;div id=&quot;HCB_comment_box&quot;&gt;&lt;a href=&quot;http://www.htmlcommentbox.com&quot;&gt;Comment Form&lt;/a&gt; is loading comments...&lt;/div&gt;
-&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;//www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0&quot; /&gt;
-&lt;script type=&quot;text/javascript&quot; id=&quot;hcb&quot;&gt; /*&lt;!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement(&quot;script&quot;), l=(&quot;&quot;+window.location).replace(/&apos;/g,&quot;%27&quot;) || hcb_user.PAGE, h=&quot;//www.htmlcommentbox.com&quot;;s.setAttribute(&quot;type&quot;,&quot;text/javascript&quot;);s.setAttribute(&quot;src&quot;, h+&quot;/jread?page=&quot;+encodeURIComponent(l).replace(&quot;+&quot;,&quot;%2B&quot;)+&quot;&amp;opts=16862&amp;num=10&quot;);if (typeof s!=&quot;undefined&quot;) document.getElementsByTagName(&quot;head&quot;)[0].appendChild(s);})(); /*--&gt;*/ &lt;/script&gt;
-&lt;!-- end htmlcommentbox.com --&gt;
 
 	</description>
     </item>
