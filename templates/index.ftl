@@ -10,7 +10,8 @@
   			<a href="${post.uri}"><h1><#escape x as x?xml>${post.title}</#escape></h1></a>
   			<p>${post.date?string("dd MMMM yyyy")}</p>
   			<p>${post.body}</p>
-  		</#if>
+  		        <a class="btn btn-custom" href="${post.uri}">Comments</a>
+                </#if>
   	</#list>
 	
 	<hr />

@@ -6,8 +6,8 @@
     <atom:link href="http://jbake.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>JBake Bootstrap Template</description>
     <language>en-gb</language>
-    <pubDate>Sun, 21 Jun 2015 18:52:09 +0530</pubDate>
-    <lastBuildDate>Sun, 21 Jun 2015 18:52:09 +0530</lastBuildDate>
+    <pubDate>Sat, 18 Jul 2015 23:55:58 +0530</pubDate>
+    <lastBuildDate>Sat, 18 Jul 2015 23:55:58 +0530</lastBuildDate>
 
     <item>
       <title>My Emacs CheatSheet</title>
@@ -99,6 +99,19 @@ Most important have fun.Good luck.
 &lt;p&gt;&amp;nbsp&lt;/p&gt;
 &lt;p&gt;Choose &lt;a href=&quot;https://github.com/rohitvvv/GitFx&quot;&gt;GitFx&lt;/a&gt; if you want to work on JavaFX&lt;/p&gt;
 &lt;p align=&apos;right&apos;&gt;--Rohit Vaidya&lt;/p&gt;
+&lt;div id=&quot;disqus_thread&quot;&gt;&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = &apos;rohitvvvinfo&apos;;
+
+    /* * * DON&apos;T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement(&apos;script&apos;); dsq.type = &apos;text/javascript&apos;; dsq.async = true;
+        dsq.src = &apos;//&apos; + disqus_shortname + &apos;.disqus.com/embed.js&apos;;
+        (document.getElementsByTagName(&apos;head&apos;)[0] || document.getElementsByTagName(&apos;body&apos;)[0]).appendChild(dsq);
+    })();
+&lt;/script&gt;
+&lt;noscript&gt;Please enable JavaScript to view the &lt;a href=&quot;https://disqus.com/?ref_noscript&quot; rel=&quot;nofollow&quot;&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
 
 	</description>
     </item>
