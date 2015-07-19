@@ -16,7 +16,7 @@ Exception in thread "main" java.lang.SecurityException: Invalid signature file d
 	at java.util.jar.JarFile.initializeVerifier(JarFile.java:383)
 </code>
 </pre>
-
+<!--more-->
 <p>If you a mere mortal like I am and have got this SecurityException after adding a maven repository read on. 
     The most basic cause of such a exception is some dependency define in pom.xml is pulling in jars which are singed. After building your application unzip the final jar that gets created for your application. 
 <p>

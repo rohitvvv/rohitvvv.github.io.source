@@ -6,8 +6,8 @@
     <atom:link href="http://jbake.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>JBake Bootstrap Template</description>
     <language>en-gb</language>
-    <pubDate>Sat, 18 Jul 2015 23:55:58 +0530</pubDate>
-    <lastBuildDate>Sat, 18 Jul 2015 23:55:58 +0530</lastBuildDate>
+    <pubDate>Sun, 19 Jul 2015 15:39:18 +0530</pubDate>
+    <lastBuildDate>Sun, 19 Jul 2015 15:39:18 +0530</lastBuildDate>
 
     <item>
       <title>My Emacs CheatSheet</title>
@@ -17,6 +17,8 @@
       	<description>
 	
 &lt;p&gt;This is my Emacs cheat sheet.  
+
+&lt;!--more--&gt;
 &lt;pre class=&quot;prettyprint&quot;&gt;
 &lt;code&gt;
 Note: If you are new to emacs C - Ctrl M - Esc key. &apos;-&apos; indicates simultaneous key press
@@ -75,6 +77,7 @@ To talk to a doctor M-w doctor
       	<description>
 	How does one contribute to open source? Contribution is an overloaded term and may 
 mean a code fix, documentation changes, reporting a bug/issue, code review and comments 
+&lt;!--more--&gt;
 &lt;ol&gt;
     &lt;li&gt;There are multiple projects online on &lt;a href=&quot;https://github.com/&quot;&gt;github&lt;/a&gt; and &lt;a href=&quot;https://bitbucket.org&quot;&gt;  bitbucket&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;Choose One. Finding choosing difficult? goto 4. If you don&apos;t like any, goto 3&lt;/li&gt;
@@ -133,7 +136,7 @@ Exception in thread &quot;main&quot; java.lang.SecurityException: Invalid signat
 	at java.util.jar.JarFile.initializeVerifier(JarFile.java:383)
 &lt;/code&gt;
 &lt;/pre&gt;
-
+&lt;!--more--&gt;
 &lt;p&gt;If you a mere mortal like I am and have got this SecurityException after adding a maven repository read on. 
     The most basic cause of such a exception is some dependency define in pom.xml is pulling in jars which are singed. After building your application unzip the final jar that gets created for your application. 
 &lt;p&gt;
@@ -200,7 +203,7 @@ has a collection of Java Packages with ability to add fancy GUI to your Java app
 JavaFX is official standard part of Java platform. JavaFX is considered as a successor of Swing
 and can be easily understood by a Swing developer. You can get the latest in JavaFX in early access preview 
 of JavaFX in &lt;a href=&quot;https://jdk8.java.net/download.html&quot;&gt;Java 8 EA 40&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;b&gt;History:&lt;/b&gt; Formerly it was called in F3(Form Follows function) and developed by Oliver Smith at Sun 
+&lt;!--more--&gt;&lt;p&gt;&lt;b&gt;History:&lt;/b&gt; Formerly it was called in F3(Form Follows function) and developed by Oliver Smith at Sun 
     Microsystems. JavaFX was initially developed as a scripting language however it was later 
     discontinued by Oracle and declared dead in Java One 2010. Now JavaFX has a clean Java API. 
 
