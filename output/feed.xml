@@ -6,9 +6,21 @@
     <atom:link href="http://jbake.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>JBake Bootstrap Template</description>
     <language>en-gb</language>
-    <pubDate>Sun, 19 Jul 2015 15:39:18 +0530</pubDate>
-    <lastBuildDate>Sun, 19 Jul 2015 15:39:18 +0530</lastBuildDate>
+    <pubDate>Sat, 13 Feb 2016 12:57:37 +0530</pubDate>
+    <lastBuildDate>Sat, 13 Feb 2016 12:57:38 +0530</lastBuildDate>
 
+    <item>
+      <title>Creating and Destroying Objects</title>
+      <link>http://jbake.org/blog/2016/Creating-and-Destroying-Objects.html</link>
+      <pubDate>Sat, 13 Feb 2016 00:00:00 +0530</pubDate>
+      <guid isPermaLink="false">blog/2016/Creating-and-Destroying-Objects.html</guid>
+      	<description>
+	
+&lt;p&gt;Creating a Destroying Object. A presentation given at JUG Hyderabad. The content is inspired by Joshua Bloch&apos;s book The effective Java. 
+&lt;iframe src=&quot;http://www.slideshare.net/RohitVaidya3/slideshelf&quot; width=&quot;760px&quot; height=&quot;570px&quot; frameborder=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; scrolling=&quot;no&quot; style=&quot;border:none;&quot; allowfullscreen webkitallowfullscreen mozallowfullscreen&gt;&lt;/iframe&gt;
+
+	</description>
+    </item>
     <item>
       <title>My Emacs CheatSheet</title>
       <link>http://jbake.org/blog/2015/Emacs-CheatSheet.html</link>
