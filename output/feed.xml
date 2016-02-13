@@ -6,8 +6,8 @@
     <atom:link href="http://jbake.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>JBake Bootstrap Template</description>
     <language>en-gb</language>
-    <pubDate>Sat, 13 Feb 2016 12:57:37 +0530</pubDate>
-    <lastBuildDate>Sat, 13 Feb 2016 12:57:38 +0530</lastBuildDate>
+    <pubDate>Sat, 13 Feb 2016 22:46:32 +0530</pubDate>
+    <lastBuildDate>Sat, 13 Feb 2016 22:46:32 +0530</lastBuildDate>
 
     <item>
       <title>Creating and Destroying Objects</title>
@@ -18,6 +18,23 @@
 	
 &lt;p&gt;Creating a Destroying Object. A presentation given at JUG Hyderabad. The content is inspired by Joshua Bloch&apos;s book The effective Java. 
 &lt;iframe src=&quot;http://www.slideshare.net/RohitVaidya3/slideshelf&quot; width=&quot;760px&quot; height=&quot;570px&quot; frameborder=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; scrolling=&quot;no&quot; style=&quot;border:none;&quot; allowfullscreen webkitallowfullscreen mozallowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;div id=&quot;disqus_thread&quot;&gt;&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = &apos;rohitvvvinfo&apos;;
+
+    /* * * DON&apos;T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement(&apos;script&apos;); dsq.type = &apos;text/javascript&apos;; dsq.async = true;
+        dsq.src = &apos;//&apos; + disqus_shortname + &apos;.disqus.com/embed.js&apos;;
+        (document.getElementsByTagName(&apos;head&apos;)[0] || document.getElementsByTagName(&apos;body&apos;)[0]).appendChild(dsq);
+    })();
+&lt;/script&gt;
+&lt;noscript&gt;Please enable JavaScript to view the &lt;a href=&quot;https://disqus.com/?ref_noscript&quot; rel=&quot;nofollow&quot;&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
+
+&lt;!-- end htmlcommentbox.com --&gt;
+
 
 	</description>
     </item>
