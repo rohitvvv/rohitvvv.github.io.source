@@ -6,9 +6,161 @@
     <atom:link href="http://jbake.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>JBake Bootstrap Template</description>
     <language>en-gb</language>
-    <pubDate>Sat, 13 Feb 2016 22:46:32 +0530</pubDate>
-    <lastBuildDate>Sat, 13 Feb 2016 22:46:32 +0530</lastBuildDate>
+    <pubDate>Thu, 17 Mar 2016 00:16:35 +0530</pubDate>
+    <lastBuildDate>Thu, 17 Mar 2016 00:16:35 +0530</lastBuildDate>
 
+    <item>
+      <title>Oracle JET Getting Started</title>
+      <link>http://jbake.org/blog/2016/Oracle-JET-GettingStarted.html</link>
+      <pubDate>Wed, 16 Mar 2016 00:00:00 +0530</pubDate>
+      <guid isPermaLink="false">blog/2016/Oracle-JET-GettingStarted.html</guid>
+      	<description>
+	
+&lt;h3&gt;JavaScript Extension Toolkit &lt;/h3&gt;
+  Oracle Jet Framework. This is an introductory post of Oracle JET JavaScript library. 
+  Doing this excercise to evaluate the JS framework. I would be doing more focussed posts latter.
+  
+  &lt;h3&gt;Oracle JET Overview: &lt;/h3&gt;
+  Oracle JET is a collection of Oracle and open source JavaScript Libraries. 
+  A quote by Issac Newton is really apt to describe what Oracle has done. &quot;If I have seen further it is by standing 
+  on the shoulders of giants&quot;
+ 
+
+  &lt;h3&gt; What has JET consumed?&lt;/h3&gt;
+   
+  Just to illustrate a few keywords on what these libraries used for
+  &lt;ol&gt;
+      &lt;LI&gt; &lt;b&gt;Require JS:&lt;/b&gt; File and Module loader. Is optimised for in browser use and can be used in Javascript environments like Rhino and Node
+      &lt;li&gt; &lt;b&gt; JQuery:&lt;/b&gt; Lightweight JS Library with support for standard and contemproary UI components, event handling, animation and AJAX. 
+      &lt;li&gt; &lt;b&gt;Knockout:&lt;/b&gt; Data Binding, Automatic UI Refresh, Templating
+      &lt;li&gt; &lt;b&gt; Promise:&lt;/b&gt; Build in object in Javacript but avaiable in Ecma Script 6. Useful for deferred and asynchronous computation. 
+      &lt;li&gt; &lt;b&gt;Hammer JS:&lt;/b&gt; Support for touch gestures in JS application
+      &lt;li&gt; &lt;b&gt;CrossRoads:&lt;/b&gt; Routing library. A URL Route/Dispatch library. Similar to one present in frameworks like Rails, Django etc.
+      &lt;li&gt; &lt;b&gt;JS-Signals:&lt;/b&gt; custom Event/Messaging System for JavaScript
+  &lt;/oL&gt;
+  Thats a really comprehensive collection of js libraries which cater to needs of a modern client side application. 
+   &lt;!--more--&gt;
+ 
+  &lt;h3&gt;What would you use Oracle JET for? &lt;/h3&gt;
+  As indicated in Jet Documentation[1]
+  &lt;ol&gt;
+      &lt;li&gt; Add interactivity to existing pages
+      &lt;li&gt; Create a new end to end client side web application with HTML5,CSS, and responsive web design
+  &lt;li&gt; Create a hybrid mobile application that feels like a native Android IOS app
+  &lt;/oL&gt;
+  &lt;h3&gt; Getting started&lt;/h3&gt;
+  Oracle JET has good tooling support to get started. One can use Yeoman or Grunt. However the easiest way to do 
+  HelloWorld type project is to install Oracle Jet Support Plugin. Create a JET project selecting the Project
+  Category has HTML5/Javascript. Select Oracle JET QuickStart Basic. 
+
+  &lt;h3&gt;Understanding the Project Structure of Sample application&lt;/h3&gt;
+  &lt;table&gt;
+      &lt;tr&gt;   
+  Site Root/css:
+      &lt;tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;
+              Site Root/js&lt;/td&gt;&lt;td&gt;The JS prerequisites for your application&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td&gt;Site Root/js/main.js&lt;/td&gt;&lt;td&gt; Require.js boostrap javascript&lt;/td&gt; 
+      &lt;tr&gt;&lt;td&gt;Site Root/js/main-release-path.json&lt;/td&gt;&lt;td&gt;JSON object which points to physical location of JS libraries&lt;/td&gt;
+      &lt;tr&gt;&lt;td&gt;Site Root/scss:&lt;/td&gt;&lt;td&gt; Oracle JET uses SCSS files to preprocess the CSS files.  &lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td&gt;  Site Root/scss/alta:&lt;/td&gt;&lt;td&gt; Files belonging the alta Theme&lt;/td&gt; 
+      &lt;tr&gt;&lt;td&gt;Site Root/scss/common:&lt;/td&gt;&lt;td&gt; Contains common files shared by multiple themes&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td&gt; Site Root/scss/utilties:&lt;/td&gt;&lt;td&gt; Contains SASS Mixins. If you don&apos;t know CSS preprocessor read http://sass-lang.com/guide&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td&gt;Site Root/scss/3rdparty:&lt;/td&gt;&lt;td&gt; Oracle&apos;s port of third party files such as normalize[2]&lt;/td&gt;
+      &lt;tr&gt;&lt;td&gt;Site Root/index.html: &lt;/td&gt;&lt;/tr&gt;
+  &lt;/table&gt;
+
+  &lt;h3&gt; Understanding Require boostrap file&lt;/h3&gt;
+  The boostrap file is self explanatory and indicates the modules which should be injected in the web application. 
+  You can also add custom modules to be injected by require.js
+  &lt;pre class=&quot;prettyprint&quot;&gt;
+&lt;code&gt; 
+
+  requirejs.config({
+  // Path mappings for the logical module names
+  paths: 
+ //injector:mainReleasePaths
+  {
+    &apos;knockout&apos;: &apos;libs/knockout/knockout-3.4.0&apos;,
+    &apos;jquery&apos;: &apos;libs/jquery/jquery-2.1.3.min&apos;,
+    &apos;jqueryui-amd&apos;: &apos;libs/jquery/jqueryui-amd-1.11.4.min&apos;,
+    &apos;promise&apos;: &apos;libs/es6-promise/promise-1.0.0.min&apos;,
+    &apos;hammerjs&apos;: &apos;libs/hammer/hammer-2.0.4.min&apos;,
+    &apos;ojdnd&apos;: &apos;libs/dnd-polyfill/dnd-polyfill-1.0.0.min&apos;,
+    &apos;ojs&apos;: &apos;libs/oj/v2.0.0/debug&apos;,
+    &apos;ojL10n&apos;: &apos;libs/oj/v2.0.0/ojL10n&apos;,
+    &apos;ojtranslations&apos;: &apos;libs/oj/v2.0.0/resources&apos;,
+    &apos;signals&apos;: &apos;libs/js-signals/signals.min&apos;,
+    &apos;text&apos;: &apos;libs/require/text&apos;
+  }
+  //endinjector
+  );
+&lt;/code&gt;&lt;/pre&gt;
+ This is a top level require call executed by the application. 
+  oj,ko,$ gives access to oj(Oracle Jet),ko(KnockOut) and $(JQuery selector) namespace 
+  &lt;pre class=&quot;prettyprint&quot;&gt;
+&lt;code&gt; 
+
+ require([&apos;ojs/ojcore&apos;, &apos;knockout&apos;, &apos;jquery&apos;, &apos;ojs/knockout&apos;, &apos;ojs/ojbutton&apos;, &apos;ojs/ojtoolbar&apos;, &apos;ojs/ojmenu&apos;],
+  // add additional JET component libraries as needed
+  function(oj, ko, $) // this callback gets executed when all required modules are loaded
+  {
+      // add any startup code that you want here
+  }
+ );
+&lt;/code&gt;&lt;/pre&gt;
+ Refer following documentation in [1]
+  &lt;h3&gt; Understanding the index.html&lt;/h3&gt;
+  The index.html has reference to require js script. The require script will take care of injecting libraries as defined 
+  in the bootrap script file.
+  Inspecting the HTML one can easily spot the JET CSS classes referenced. 
+  &lt;pre class=&quot;prettyprint&quot;&gt;
+&lt;code&gt; 
+    div id=&quot;globalBody&quot; class=&quot;oj-web-applayout-offcanvas-wrapper oj-offcanvas-outer-wrapper&quot;
+  &lt;/code&gt; 
+  &lt;/pre&gt;
+  
+  Knockout js binding can be spotted here as well
+&lt;pre class=&quot;prettyprint&quot;&gt;
+&lt;code&gt; 
+    div id=&quot;offcanvas&quot; class=&quot;oj-contrast-marker oj-web-applayout-offcanvas oj-offcanvas-start&quot;
+               data-bind=&quot;ojModule: {viewName: &apos;navDrawer&apos;}
+&lt;/code&gt;
+  &lt;/pre&gt; 
+  &lt;h3&gt;References&lt;/h3&gt;
+  &lt;ol&gt; 
+      &lt;li&gt; &lt;a href=&quot;https://docs.oracle.com/middleware/jet200/jet/developer/GUID-C6947139-DF37-4258-8E02-2679F40535E1.htm#JETDG108&quot;&gt;Jet Developers Guide&lt;/a&gt;
+      &lt;li&gt; &lt;a href=&quot;https://github.com/JohnAlbin/normalize-scss&quot;&gt;Normalize SCSS&lt;/a&gt;
+      &lt;li&gt; &lt;a href=&quot;http://knockoutjs.com/&quot;&gt;Knockout JS&lt;/a&gt;
+      &lt;li&gt; &lt;a href=&quot;https://jquery.com/&quot;&gt;JQuery&lt;/a&gt;
+      &lt;li&gt; &lt;a href=&quot;https://millermedeiros.github.io/crossroads.js/&quot;&gt;Crossroads&lt;/a&gt;
+      &lt;li&gt;  &lt;a href=&quot;http://millermedeiros.github.io/js-signals/&quot;&gt;JS Signals&lt;/a&gt;
+      &lt;li&gt; &lt;a href=&quot;http://hammerjs.github.io/&quot;&gt;Hammer JS&lt;/a&gt;
+      &lt;li&gt; &lt;a href=&quot;https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Promise&quot;&gt;ES6 JS Promise &lt;/a&gt;
+      &lt;li&gt; &lt;a href=&quot;http://requirejs.org/&quot;&gt;Require JS&lt;/a&gt;
+      &lt;li&gt; &lt;a href=&quot;http://sass-lang.com/guide&quot;&gt;SASS&lt;/a&gt;
+  &lt;/ol&gt;
+ 
+
+&lt;div id=&quot;disqus_thread&quot;&gt;&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = &apos;rohitvvvinfo&apos;;
+    
+    /* * * DON&apos;T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement(&apos;script&apos;); dsq.type = &apos;text/javascript&apos;; dsq.async = true;
+        dsq.src = &apos;//&apos; + disqus_shortname + &apos;.disqus.com/embed.js&apos;;
+        (document.getElementsByTagName(&apos;head&apos;)[0] || document.getElementsByTagName(&apos;body&apos;)[0]).appendChild(dsq);
+    })();
+&lt;/script&gt;
+&lt;noscript&gt;Please enable JavaScript to view the &lt;a href=&quot;https://disqus.com/?ref_noscript&quot; rel=&quot;nofollow&quot;&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
+
+&lt;!-- end htmlcommentbox.com --&gt;
+
+	</description>
+    </item>
     <item>
       <title>Creating and Destroying Objects</title>
       <link>http://jbake.org/blog/2016/Creating-and-Destroying-Objects.html</link>

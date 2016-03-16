@@ -1,9 +1,0 @@
-title=Creating and Destroying Objects
-date=2016-02-13
-type=post
-tags=java
-status=published
-~~~~~~
-
-<p>Creating a Destroying Object. A presentation given at JUG Hyderabad. The content is inspired by Joshua Bloch's book The effective Java. 
-<iframe src="http://www.slideshare.net/RohitVaidya3/slideshelf" width="760px" height="570px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:none;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe>
