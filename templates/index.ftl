@@ -21,7 +21,7 @@
   			<p>${post.date?string("dd MMMM yyyy")}</p>
   		</p>
                       <p>${summary(post.body)}</p>
-  		        <a class="btn btn-custom" href="${post.uri}">Read More</a>
+  		        <a class="btn btn-success" href="${post.uri}">Read More</a>
                 </#if>
   	</#list>
 	
