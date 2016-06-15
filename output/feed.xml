@@ -6,8 +6,8 @@
     <atom:link href="http://jbake.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>JBake Bootstrap Template</description>
     <language>en-gb</language>
-    <pubDate>Wed, 15 Jun 2016 00:53:30 +0530</pubDate>
-    <lastBuildDate>Wed, 15 Jun 2016 00:53:30 +0530</lastBuildDate>
+    <pubDate>Thu, 16 Jun 2016 00:14:48 +0530</pubDate>
+    <lastBuildDate>Thu, 16 Jun 2016 00:14:48 +0530</lastBuildDate>
 
     <item>
       <title>Oracle JET Getting Started</title>
@@ -16,7 +16,7 @@
       <guid isPermaLink="false">blog/2016/Oracle-JET-GettingStarted.html</guid>
       	<description>
 	&lt;h3&gt;JavaScript Extension Toolkit &lt;/h3&gt;
-&lt;div class=&quot;jumbotron&quot;&gt;
+&lt;div class=&quot;&quot;&gt;
   Oracle Jet Framework. This is an introductory post of Oracle JET JavaScript library. 
   Doing this excercise to evaluate the JS framework. I would be doing more focussed posts latter.
   
@@ -169,8 +169,10 @@
       	<description>
 	&lt;div&gt;
 &lt;p&gt;Creating a Destroying Object. A presentation given at JUG Hyderabad. The content is inspired by Joshua Bloch&apos;s book The effective Java. 
-  &lt;iframe src=&quot;http://www.slideshare.net/RohitVaidya3/slideshelf&quot; width=&quot;760px&quot; height=&quot;570px&quot; frameborder=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; scrolling=&quot;no&quot; style=&quot;border:none;&quot; allowfullscreen webkitallowfullscreen mozallowfullscreen&gt;&lt;/iframe&gt;
-  &lt;/div&gt;
+
+&lt;iframe src=&quot;//www.slideshare.net/slideshow/embed_code/key/3TPMJ6UQr9ccN0&quot; width=&quot;595&quot; height=&quot;485&quot; frameborder=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; scrolling=&quot;no&quot; style=&quot;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&quot; allowfullscreen&gt; &lt;/iframe&gt; &lt;div style=&quot;margin-bottom:5px&quot;&gt; &lt;strong&gt; &lt;a href=&quot;//www.slideshare.net/RohitVaidya3/effective-java-creating-and-destroying-objects&quot; title=&quot;Effective java - Creating and Destroying Objects&quot; target=&quot;_blank&quot;&gt;Effective java - Creating and Destroying Objects&lt;/a&gt; &lt;/strong&gt; from &lt;strong&gt;&lt;a href=&quot;//www.slideshare.net/RohitVaidya3&quot; target=&quot;_blank&quot;&gt;Rohit Vaidya&lt;/a&gt;&lt;/strong&gt; &lt;/div&gt;
+
+&lt;/div&gt;
 &lt;!--more--&gt;
 &lt;div id=&quot;disqus_thread&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;

@@ -1,0 +1,57 @@
+title=My Emacs CheatSheet
+date=2015-06-20
+type=post
+tags=emacs
+status=published
+~~~~~~
+
+<p>This is my Emacs cheat sheet.  
+
+<!--more-->
+<pre class="prettyprint">
+<code>
+Note: If you are new to emacs C - Ctrl M - Esc key. '-' indicates simultaneous key press
+To split a window vertically C-x 3
+To split a window horizontally C-x 2
+To kill a buffer C-x-0
+To swtich between buffers: C-x-o
+To save C-x-s
+To open a new file: C-x-f
+To undo C-/
+To switch buffers: C-x-b. This will show a list of buffers. Switch to the buffer by selecting the buffer. 
+To open a shell: M-x shell
+To play tetris : M-x tetris
+To kill a line: C-k
+To Paste: C-y pastes last kill text. Kill with C-k
+To Cut kill next word M-d
+To Cut sentence M-k
+To copy a selected region M-w 
+To move end of buffer M->
+To move to beginning of buffer M-<
+To move forward 4 lines C-u C-n
+To move forward 16 lnes C-u C-u C-n
+To jump to specified line M g g 
+To search incrementally C-s (C-s again to search)
+To start org-mode M-x org-mode
+To search and replace C-% enter ! to replace all the occurences. y to replace current. n to skip and q to quit
+To add deadline to todo item in org mode C-c-d
+To open browser in emacs M-w eww [return] Type the URL
+To tweet using emacs <a href="http://emacswiki.org/emacs/TwitteringMode">Twittering Mode</a> E-w twit 
+To talk to a doctor M-w doctor 
+</code>
+</pre>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'rohitvvvinfo';
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+<!-- end htmlcommentbox.com -->
