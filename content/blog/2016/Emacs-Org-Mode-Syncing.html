@@ -1,0 +1,59 @@
+title=Syncing Org mode files
+date=2016-09-29
+type=post
+tags=emacse
+status=published
+~~~~~~
+<div>
+<p>
+I like to use <a href="http://orgmode.org/">org mode</a> with <a href="https://www.gnu.org/software/emacs/">Emacs</a>. It helps me stay organized. The long vertical green
+lines of accomplished tasks gives me immense satifaction.
+I also heavily use org-agenda feature which helps me keep track of multiple org files.
+However syncing org mode files across machines like work place computer and personal laptop
+is a pain. I tried using <a href="http://orgmode.org/manual/MobileOrg.html">mobile-org</a> but could never set it up correctly. Here is a better alternative.
+<!--more-->
+<p>
+  <br>
+  <a href="../../../assets/images/todo.png">
+  <img src="../../../assets/images/todo.png" class="img-rounded" alt="Emacs Todo" width="304" height="236"/>
+  </a>
+  <a href="../../../assets/images/git-blame-buffer.png">
+  <img src="../../../assets/images/git-blame-buffer.png" class="img-rounded" alt="Git Buffer in Emacs" width="304" height="236"/>
+  </a>
+  <a href="../../../assets/images/cfw.png">
+  <img src="../../../assets/images/cfw.png" class="img-rounded" alt="Cfw Calendar" width="304" height="236"/>
+  </a>
+  <br>
+<p>&nbsp</p>
+A better option is to use a version control like git. I wanted to avoid public
+repository as I don't want my org files to be publically forked :-).
+Bitbuket allows you to have private repositories. Create one. Atlassian is simply cool.
+<p>
+Install git-blame and git from melpa repository. Edit your org mode files.
+Commit them using git-blame buffer. Push. Syncing is fun.
+
+<p>
+The only pain point with git-blame is you cannot push. May be I will find a better alternative.
+For now I use
+<b>M-x shell-command</b> to enter my push commands "git push orgin master" and it works
+like breeze.
+<br>
+Also, the <a href="https://github.com/kiwanami/emacs-calfw">cfw calendar</a> is simply awesome.
+Synced it with google calendar and you
+have everything in google calendar.
+<p>
+Happy Syncing. Please let me know your thoughts.
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'rohitvvvinfo';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+</div>

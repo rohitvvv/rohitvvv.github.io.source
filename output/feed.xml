@@ -6,9 +6,71 @@
     <atom:link href="http://jbake.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>JBake Bootstrap Template</description>
     <language>en-gb</language>
-    <pubDate>Thu, 16 Jun 2016 00:28:55 +0530</pubDate>
-    <lastBuildDate>Thu, 16 Jun 2016 00:28:55 +0530</lastBuildDate>
+    <pubDate>Thu, 29 Sep 2016 21:18:29 +0530</pubDate>
+    <lastBuildDate>Thu, 29 Sep 2016 21:18:29 +0530</lastBuildDate>
 
+    <item>
+      <title>Syncing Org mode files</title>
+      <link>http://jbake.org/blog/2016/Emacs-Org-Mode-Syncing.html</link>
+      <pubDate>Thu, 29 Sep 2016 00:00:00 +0530</pubDate>
+      <guid isPermaLink="false">blog/2016/Emacs-Org-Mode-Syncing.html</guid>
+      	<description>
+	&lt;div&gt;
+&lt;p&gt;
+I like to use &lt;a href=&quot;http://orgmode.org/&quot;&gt;org mode&lt;/a&gt; with &lt;a href=&quot;https://www.gnu.org/software/emacs/&quot;&gt;Emacs&lt;/a&gt;. It helps me stay organized. The long vertical green
+lines of accomplished tasks gives me immense satifaction.
+I also heavily use org-agenda feature which helps me keep track of multiple org files.
+However syncing org mode files across machines like work place computer and personal laptop
+is a pain. I tried using &lt;a href=&quot;http://orgmode.org/manual/MobileOrg.html&quot;&gt;mobile-org&lt;/a&gt; but could never set it up correctly. Here is a better alternative.
+&lt;!--more--&gt;
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;a href=&quot;../../../assets/images/todo.png&quot;&gt;
+  &lt;img src=&quot;../../../assets/images/todo.png&quot; class=&quot;img-rounded&quot; alt=&quot;Emacs Todo&quot; width=&quot;304&quot; height=&quot;236&quot;/&gt;
+  &lt;/a&gt;
+  &lt;a href=&quot;../../../assets/images/git-blame-buffer.png&quot;&gt;
+  &lt;img src=&quot;../../../assets/images/git-blame-buffer.png&quot; class=&quot;img-rounded&quot; alt=&quot;Git Buffer in Emacs&quot; width=&quot;304&quot; height=&quot;236&quot;/&gt;
+  &lt;/a&gt;
+  &lt;a href=&quot;../../../assets/images/cfw.png&quot;&gt;
+  &lt;img src=&quot;../../../assets/images/cfw.png&quot; class=&quot;img-rounded&quot; alt=&quot;Cfw Calendar&quot; width=&quot;304&quot; height=&quot;236&quot;/&gt;
+  &lt;/a&gt;
+  &lt;br&gt;
+&lt;p&gt;&amp;nbsp&lt;/p&gt;
+A better option is to use a version control like git. I wanted to avoid public
+repository as I don&apos;t want my org files to be publically forked :-).
+Bitbuket allows you to have private repositories. Create one. Atlassian is simply cool.
+&lt;p&gt;
+Install git-blame and git from melpa repository. Edit your org mode files.
+Commit them using git-blame buffer. Push. Syncing is fun.
+
+&lt;p&gt;
+The only pain point with git-blame is you cannot push. May be I will find a better alternative.
+For now I use
+&lt;b&gt;M-x shell-command&lt;/b&gt; to enter my push commands &quot;git push orgin master&quot; and it works
+like breeze.
+&lt;br&gt;
+Also, the &lt;a href=&quot;https://github.com/kiwanami/emacs-calfw&quot;&gt;cfw calendar&lt;/a&gt; is simply awesome.
+Synced it with google calendar and you
+have everything in google calendar.
+&lt;p&gt;
+Happy Syncing. Please let me know your thoughts.
+&lt;script type=&quot;text/javascript&quot;&gt;
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = &apos;rohitvvvinfo&apos;;
+
+    /* * * DON&apos;T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement(&apos;script&apos;); dsq.type = &apos;text/javascript&apos;; dsq.async = true;
+        dsq.src = &apos;//&apos; + disqus_shortname + &apos;.disqus.com/embed.js&apos;;
+        (document.getElementsByTagName(&apos;head&apos;)[0] || document.getElementsByTagName(&apos;body&apos;)[0]).appendChild(dsq);
+    })();
+&lt;/script&gt;
+&lt;noscript&gt;Please enable JavaScript to view the &lt;a href=&quot;https://disqus.com/?ref_noscript&quot; rel=&quot;nofollow&quot;&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
+
+&lt;/div&gt;
+
+	</description>
+    </item>
     <item>
       <title>Guava</title>
       <link>http://jbake.org/blog/2016/Guava-Library.html</link>
