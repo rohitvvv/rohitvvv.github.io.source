@@ -6,8 +6,8 @@
     <atom:link href="http://jbake.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>JBake Bootstrap Template</description>
     <language>en-gb</language>
-    <pubDate>Thu, 29 Sep 2016 21:18:29 +0530</pubDate>
-    <lastBuildDate>Thu, 29 Sep 2016 21:18:29 +0530</lastBuildDate>
+    <pubDate>Thu, 29 Sep 2016 21:24:49 +0530</pubDate>
+    <lastBuildDate>Thu, 29 Sep 2016 21:24:49 +0530</lastBuildDate>
 
     <item>
       <title>Syncing Org mode files</title>
@@ -25,14 +25,14 @@ is a pain. I tried using &lt;a href=&quot;http://orgmode.org/manual/MobileOrg.ht
 &lt;!--more--&gt;
 &lt;p&gt;
   &lt;br&gt;
-  &lt;a href=&quot;../../../assets/images/todo.png&quot;&gt;
-  &lt;img src=&quot;../../../assets/images/todo.png&quot; class=&quot;img-rounded&quot; alt=&quot;Emacs Todo&quot; width=&quot;304&quot; height=&quot;236&quot;/&gt;
+  &lt;a href=&quot;../../images/todo.png&quot;&gt;
+  &lt;img src=&quot;../../images/todo.png&quot; class=&quot;img-rounded&quot; alt=&quot;Emacs Todo&quot; width=&quot;304&quot; height=&quot;236&quot;/&gt;
   &lt;/a&gt;
-  &lt;a href=&quot;../../../assets/images/git-blame-buffer.png&quot;&gt;
-  &lt;img src=&quot;../../../assets/images/git-blame-buffer.png&quot; class=&quot;img-rounded&quot; alt=&quot;Git Buffer in Emacs&quot; width=&quot;304&quot; height=&quot;236&quot;/&gt;
+  &lt;a href=&quot;../../images/git-blame-buffer.png&quot;&gt;
+  &lt;img src=&quot;../../images/git-blame-buffer.png&quot; class=&quot;img-rounded&quot; alt=&quot;Git Buffer in Emacs&quot; width=&quot;304&quot; height=&quot;236&quot;/&gt;
   &lt;/a&gt;
-  &lt;a href=&quot;../../../assets/images/cfw.png&quot;&gt;
-  &lt;img src=&quot;../../../assets/images/cfw.png&quot; class=&quot;img-rounded&quot; alt=&quot;Cfw Calendar&quot; width=&quot;304&quot; height=&quot;236&quot;/&gt;
+  &lt;a href=&quot;../../images/cfw.png&quot;&gt;
+  &lt;img src=&quot;../../images/cfw.png&quot; class=&quot;img-rounded&quot; alt=&quot;Cfw Calendar&quot; width=&quot;304&quot; height=&quot;236&quot;/&gt;
   &lt;/a&gt;
   &lt;br&gt;
 &lt;p&gt;&amp;nbsp&lt;/p&gt;
