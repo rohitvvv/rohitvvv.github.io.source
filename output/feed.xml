@@ -6,9 +6,39 @@
     <atom:link href="http://jbake.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>JBake Bootstrap Template</description>
     <language>en-gb</language>
-    <pubDate>Thu, 29 Sep 2016 21:40:46 +0530</pubDate>
-    <lastBuildDate>Thu, 29 Sep 2016 21:40:46 +0530</lastBuildDate>
+    <pubDate>Wed, 19 Oct 2016 21:02:58 +0530</pubDate>
+    <lastBuildDate>Wed, 19 Oct 2016 21:02:58 +0530</lastBuildDate>
 
+    <item>
+      <title>Functional Programming with Clojure</title>
+      <link>http://jbake.org/blog/2016/Clojure.html</link>
+      <pubDate>Mon, 10 Jul 2017 00:00:00 +0530</pubDate>
+      <guid isPermaLink="false">blog/2016/Clojure.html</guid>
+      	<description>
+	&lt;div&gt;
+  &lt;p&gt;Demystifying Functional Programming with Clojure.&lt;/br&gt;
+    &lt;iframe src=&quot;//www.slideshare.net/slideshow/embed_code/key/lLg7DWRYVlWplq&quot; width=&quot;595&quot; height=&quot;485&quot; frameborder=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; scrolling=&quot;no&quot; style=&quot;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&quot; allowfullscreen&gt; &lt;/iframe&gt; &lt;div style=&quot;margin-bottom:5px&quot;&gt; &lt;strong&gt; &lt;a href=&quot;//www.slideshare.net/RohitVaidya3/clojure-67414947&quot; title=&quot;Clojure&quot; target=&quot;_blank&quot;&gt;Clojure&lt;/a&gt; &lt;/strong&gt; from &lt;strong&gt;&lt;a target=&quot;_blank&quot; href=&quot;//www.slideshare.net/RohitVaidya3&quot;&gt;Rohit Vaidya&lt;/a&gt;&lt;/strong&gt; &lt;/div&gt;
+&lt;/div&gt;
+&lt;!--more--&gt;
+&lt;div id=&quot;disqus_thread&quot;&gt;&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = &apos;rohitvvvinfo&apos;;
+
+    /* * * DON&apos;T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement(&apos;script&apos;); dsq.type = &apos;text/javascript&apos;; dsq.async = true;
+        dsq.src = &apos;//&apos; + disqus_shortname + &apos;.disqus.com/embed.js&apos;;
+        (document.getElementsByTagName(&apos;head&apos;)[0] || document.getElementsByTagName(&apos;body&apos;)[0]).appendChild(dsq);
+    })();
+&lt;/script&gt;
+&lt;noscript&gt;Please enable JavaScript to view the &lt;a href=&quot;https://disqus.com/?ref_noscript&quot; rel=&quot;nofollow&quot;&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
+
+&lt;!-- end htmlcommentbox.com --&gt;
+
+
+	</description>
+    </item>
     <item>
       <title>Syncing Emacs Org Files</title>
       <link>http://jbake.org/blog/2016/Emacs-Org-Mode-Syncing.html</link>

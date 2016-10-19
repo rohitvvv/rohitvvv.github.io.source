@@ -1,0 +1,27 @@
+title=Functional Programming with Clojure
+date=2016-19-10
+type=post
+tags=clojure functional
+status=published
+~~~~~~
+<div>
+  <p>Demystifying Functional Programming with Clojure.
+    <iframe src="//www.slideshare.net/slideshow/embed_code/key/lLg7DWRYVlWplq" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/RohitVaidya3/clojure-67414947" title="Clojure" target="_blank">Clojure</a> </strong> from <strong><a target="_blank" href="//www.slideshare.net/RohitVaidya3">Rohit Vaidya</a></strong> </div>
+</div>
+<!--more-->
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'rohitvvvinfo';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+<!-- end htmlcommentbox.com -->
+
