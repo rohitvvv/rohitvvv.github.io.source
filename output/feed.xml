@@ -6,13 +6,42 @@
     <atom:link href="http://jbake.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>JBake Bootstrap Template</description>
     <language>en-gb</language>
-    <pubDate>Wed, 19 Oct 2016 21:02:58 +0530</pubDate>
-    <lastBuildDate>Wed, 19 Oct 2016 21:02:58 +0530</lastBuildDate>
+    <pubDate>Sat, 18 Mar 2017 12:14:48 +0530</pubDate>
+    <lastBuildDate>Sat, 18 Mar 2017 12:14:48 +0530</lastBuildDate>
 
+    <item>
+      <title>How I taught a computer to play Chess</title>
+      <link>http://jbake.org/blog/2017/Chess.html</link>
+      <pubDate>Sat, 18 Mar 2017 00:00:00 +0530</pubDate>
+      <guid isPermaLink="false">blog/2017/Chess.html</guid>
+      	<description>
+	&lt;div&gt;
+  &lt;p&gt;How I taught a Computer to play Chess&lt;/br&gt;
+    &lt;iframe src=&quot;//www.slideshare.net/slideshow/embed_code/key/eAtoGgxxd2atSi&quot; width=&quot;595&quot; height=&quot;485&quot; frameborder=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; scrolling=&quot;no&quot; style=&quot;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&quot; allowfullscreen&gt; &lt;/iframe&gt; &lt;div style=&quot;margin-bottom:5px&quot;&gt; &lt;strong&gt; &lt;a href=&quot;//www.slideshare.net/RohitVaidya3/how-i-taught-a-computer-to-play-chess&quot; title=&quot;How i taught a computer to play chess&quot; target=&quot;_blank&quot;&gt;How i taught a computer to play chess&lt;/a&gt; &lt;/strong&gt; from &lt;strong&gt;&lt;a target=&quot;_blank&quot; href=&quot;//www.slideshare.net/RohitVaidya3&quot;&gt;Rohit Vaidya&lt;/a&gt;&lt;/strong&gt; &lt;/div&gt;
+&lt;/div&gt;
+&lt;!--more--&gt;
+&lt;div id=&quot;disqus_thread&quot;&gt;&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = &apos;rohitvvvinfo&apos;;
+
+    /* * * DON&apos;T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement(&apos;script&apos;); dsq.type = &apos;text/javascript&apos;; dsq.async = true;
+        dsq.src = &apos;//&apos; + disqus_shortname + &apos;.disqus.com/embed.js&apos;;
+        (document.getElementsByTagName(&apos;head&apos;)[0] || document.getElementsByTagName(&apos;body&apos;)[0]).appendChild(dsq);
+    })();
+&lt;/script&gt;
+&lt;noscript&gt;Please enable JavaScript to view the &lt;a href=&quot;https://disqus.com/?ref_noscript&quot; rel=&quot;nofollow&quot;&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
+
+&lt;!-- end htmlcommentbox.com --&gt;
+
+	</description>
+    </item>
     <item>
       <title>Functional Programming with Clojure</title>
       <link>http://jbake.org/blog/2016/Clojure.html</link>
-      <pubDate>Mon, 10 Jul 2017 00:00:00 +0530</pubDate>
+      <pubDate>Wed, 19 Oct 2016 00:00:00 +0530</pubDate>
       <guid isPermaLink="false">blog/2016/Clojure.html</guid>
       	<description>
 	&lt;div&gt;
@@ -425,7 +454,7 @@ Most important have fun.Good luck.
 	</description>
     </item>
     <item>
-      <title>Invalid Signature file digest - Maven solution </title>
+      <title>Invalid Signature file digest - Maven solution</title>
       <link>http://jbake.org/blog/2015/Invalid-Singature.html</link>
       <pubDate>Tue, 24 Mar 2015 00:00:00 +0530</pubDate>
       <guid isPermaLink="false">blog/2015/Invalid-Singature.html</guid>
