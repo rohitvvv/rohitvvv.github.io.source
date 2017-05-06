@@ -16,7 +16,11 @@
         <div class = "container">
 	    <div class="page-header">
 		<h1>Rohit Blogs</h1>
-		<hr></hr>
+		<a href="http://cirillocompany.de/pages/anti-if">
+  <img height="60" width="120"
+  src="http://cdn.shopify.com/s/files/1/0257/1675/t/147/assets/banner_ive-joined.gif"
+  alt="I have joined Anti-IF Campaign"></a>
+                <hr></hr>
 	    </div>
 
 	    <div class="row">
