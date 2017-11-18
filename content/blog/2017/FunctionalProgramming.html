@@ -1,0 +1,288 @@
+title=Functional Programming in JavaScript, Clojure, Java and Python-Part 1
+date=2017-11-19
+type=post
+tags=Functional Programming
+status=published
+~~~~~~
+
+<div>
+    <p><b>Map Reduce and Filter</b> are functional Idioms you frequently encounter in functional programming.
+        This is first of the series of posts that shows the comparison of functional capabilities across languages.
+    </p>
+    <p>Map, Reduce and Filter are higher order functions.
+        In Mathematics a higher order function are function that operate on other functions either by taking them
+        as arguments or returning them.</p>
+</div>
+<!--more-->
+<h2>Map</h2> <b>Map</b>
+applies a function to every item of a List/Array/Iterable/Sequence. It’s behaviour is to derive a new List/Array/Iterable/sequence y from existing List/Array/Iterable/Sequence of x.
+<p align="center"><b>y1=f(x1) y2=f(x2) y3=f(x3) y4=f(x4)</b></p>
+<p>
+    I will interchangeably use the terms List/Array/Iterable/Sequence going forward. Assume relevant meaning from the context.</p>
+
+<a href="../../images/map.png">
+    <p align="center">
+        <img  src="../../images/map.png" class="img-rounded" alt="Map Higher Order Function"/>
+    </p>
+</a>
+</p>
+Now that we know what a Map is lets use it in different programming languages.</br>
+</br>
+<p align="center"> <b>Lets increment the numbers in the list by 1</b></p>
+<P>
+    <b>JavaScript</b>
+<pre class="prettyprint">
+<code>
+
+list=[0,1,2,3,4]
+
+function inc(num){
+ return ++num;
+}
+
+list.map(inc)
+
+Output: [ 1, 2, 3, 4, 5 ]
+</code>
+</pre>
+
+</P>
+
+<P>
+    <b>Java</b>
+<pre class="prettyprint">
+<code>
+
+IntStream.range(0,5)
+                .map(x->++x)
+                .forEach(
+                        x->{
+                            System.out.print(x + " ");
+                        }
+                );
+
+Output: 1 2 3 4 5
+</code>
+</pre>
+
+</P>
+
+
+<P>
+    <b>Clojure</b>
+<pre class="prettyprint">
+<code>
+
+(map inc [0 1 2 3 4 5])
+Output: (1 2 3 4 5 6)
+
+</code>
+</pre>
+
+</P>
+
+<P>
+    <b>Python</b>
+<pre class="prettyprint">
+<code>
+
+def inc(x):
+    return x+1;
+
+list=[0,1,2,3,4]
+
+for num in map(inc,list):
+    print(num)
+
+Output:
+1
+2
+3
+4
+5
+</code>
+</pre>
+
+</P>
+
+
+<h2>Reduce</h2>
+
+<b>Reduce</b> is similar to Map that it applies a function on the list.
+However unlike Map it does not produce a list.
+It produces a single value as a result of reduction or <a href="https://en.wikipedia.org/wiki/Fold_(higher-order_function)">folding process</a>.
+<p>
+    The operation to be performed should be <a href="https://en.wikipedia.org/wiki/Associative_property">associative</a> to attain correct result. For instance
+    +,* are associative where as / and - are not.
+</p>
+
+<a href="../../images/reduce.png">
+    <p align="center">
+        <img  src="../../images/reduce.png" class="img-rounded" alt="Reduce Higher Order Function"/>
+    </p>
+</a>
+
+Now that we know what reduction is lets solve a problem.</br>
+</br>
+<p align="center"><b>Lets add up all numbers in the list.</b></p>
+
+</br>
+<P>
+    <b>JavaScript</b>
+<pre class="prettyprint">
+<code>
+
+numbers=[1,2,3,4,5]
+numbers.reduce((a,b)=>a+b)
+
+Output: 15
+</code>
+</pre>
+
+</P>
+
+<P>
+    <b>Java</b>
+<pre class="prettyprint">
+<code>
+
+System.out.println(IntStream.range(1,6)
+                .reduce((a,b)->a+b)
+                .getAsInt());
+
+Output: 15
+</code>
+</pre>
+
+</P>
+
+
+<P>
+    <b>Clojure</b>
+<pre class="prettyprint">
+<code>
+
+(reduce + [1,2,3,4,5])
+
+Output: 15
+
+</code>
+</pre>
+
+</P>
+
+<P>
+    <b>Python</b>
+<pre class="prettyprint">
+<code>
+
+numbers=[1,2,3,4,5]
+reduce(lambda x,y:x+y,numbers)
+
+Output: 15
+</code>
+</pre>
+
+</P>
+
+<h2>Filter</h2> <b> Filter function</b>takes a list and returns a list. The filtered list preserves the same order.
+Only elements satisfying a predicate are returned. A Predicate is boolean valued function.
+</br>
+</br>
+
+<a href="../../images/filter.png">
+    <p align="center">
+        <img  src="../../images/filter.png" class="img-rounded" alt="Reduce Higher Order Function"/>
+    </p>
+</a>
+
+</br>
+</br>
+<p align="center"><b>Lets filter out only even numbers from a list.</b></p>
+
+
+<P>
+    <b>JavaScript</b>
+<pre class="prettyprint">
+<code>
+
+list=[0,1,2,3,4,5,6,7,8,9,10]
+list.filter(x=>x%2==0)
+
+Output:[ 0, 2, 4, 6, 8, 10 ]
+
+</code>
+</pre>
+
+</P>
+
+<P>
+    <b>Java</b>
+<pre class="prettyprint">
+<code>
+
+
+IntStream.range(0,10)
+                .filter(x->x%2==0)
+                .forEach(x->{
+                    System.out.println(x);
+                });
+Output:
+0
+2
+4
+6
+8
+
+</code>
+</pre>
+
+</P>
+
+
+<P>
+    <b>Clojure</b>
+<pre class="prettyprint">
+<code>
+
+(filter even? (range 0 11))
+Output: (0 2 4 6 8 10)
+</code>
+</pre>
+
+</P>
+
+<P>
+    <b>Python</b>
+<pre class="prettyprint">
+<code>
+
+filter(lambda x:x%2==0,range(0,10))
+
+Output:[0, 2, 4, 6, 8]
+
+</code>
+</pre>
+
+I hope you liked the post. Please share your comments.
+
+
+</p>
+
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'rohitvvvinfo';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+<!-- end htmlcommentbox.com -->
+

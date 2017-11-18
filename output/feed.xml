@@ -6,9 +6,300 @@
     <atom:link href="http://jbake.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>JBake Bootstrap Template</description>
     <language>en-gb</language>
-    <pubDate>Sat, 6 May 2017 19:02:37 +0530</pubDate>
-    <lastBuildDate>Sat, 6 May 2017 19:02:37 +0530</lastBuildDate>
+    <pubDate>Sun, 19 Nov 2017 02:14:32 +0530</pubDate>
+    <lastBuildDate>Sun, 19 Nov 2017 02:14:32 +0530</lastBuildDate>
 
+    <item>
+      <title>Functional Programming in JavaScript, Clojure, Java and Python-Part 1</title>
+      <link>http://jbake.org/blog/2017/FunctionalProgramming.html</link>
+      <pubDate>Sun, 19 Nov 2017 00:00:00 +0530</pubDate>
+      <guid isPermaLink="false">blog/2017/FunctionalProgramming.html</guid>
+      	<description>
+	
+&lt;div&gt;
+    &lt;p&gt;&lt;b&gt;Map Reduce and Filter&lt;/b&gt; are functional Idioms you frequently encounter in functional programming.
+        This is first of the series of posts that shows the comparison of functional capabilities across languages.
+    &lt;/p&gt;
+    &lt;p&gt;Map, Reduce and Filter are higher order functions.
+        In Mathematics a higher order function are function that operate on other functions either by taking them
+        as arguments or returning them.&lt;/p&gt;
+&lt;/div&gt;
+&lt;!--more--&gt;
+&lt;h2&gt;Map&lt;/h2&gt; &lt;b&gt;Map&lt;/b&gt;
+applies a function to every item of a List/Array/Iterable/Sequence. It’s behaviour is to derive a new List/Array/Iterable/sequence y from existing List/Array/Iterable/Sequence of x.
+&lt;p align=&quot;center&quot;&gt;&lt;b&gt;y1=f(x1) y2=f(x2) y3=f(x3) y4=f(x4)&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;
+    I will interchangeably use the terms List/Array/Iterable/Sequence going forward. Assume relevant meaning from the context.&lt;/p&gt;
+
+&lt;a href=&quot;../../images/map.png&quot;&gt;
+    &lt;p align=&quot;center&quot;&gt;
+        &lt;img  src=&quot;../../images/map.png&quot; class=&quot;img-rounded&quot; alt=&quot;Map Higher Order Function&quot;/&gt;
+    &lt;/p&gt;
+&lt;/a&gt;
+&lt;/p&gt;
+Now that we know what a Map is lets use it in different programming languages.&lt;/br&gt;
+&lt;/br&gt;
+&lt;p align=&quot;center&quot;&gt; &lt;b&gt;Lets increment the numbers in the list by 1&lt;/b&gt;&lt;/p&gt;
+&lt;P&gt;
+    &lt;b&gt;JavaScript&lt;/b&gt;
+&lt;pre class=&quot;prettyprint&quot;&gt;
+&lt;code&gt;
+
+list=[0,1,2,3,4]
+
+function inc(num){
+ return ++num;
+}
+
+list.map(inc)
+
+Output: [ 1, 2, 3, 4, 5 ]
+&lt;/code&gt;
+&lt;/pre&gt;
+
+&lt;/P&gt;
+
+&lt;P&gt;
+    &lt;b&gt;Java&lt;/b&gt;
+&lt;pre class=&quot;prettyprint&quot;&gt;
+&lt;code&gt;
+
+IntStream.range(0,5)
+                .map(x-&gt;++x)
+                .forEach(
+                        x-&gt;{
+                            System.out.print(x + &quot; &quot;);
+                        }
+                );
+
+Output: 1 2 3 4 5
+&lt;/code&gt;
+&lt;/pre&gt;
+
+&lt;/P&gt;
+
+
+&lt;P&gt;
+    &lt;b&gt;Clojure&lt;/b&gt;
+&lt;pre class=&quot;prettyprint&quot;&gt;
+&lt;code&gt;
+
+(map inc [0 1 2 3 4 5])
+Output: (1 2 3 4 5 6)
+
+&lt;/code&gt;
+&lt;/pre&gt;
+
+&lt;/P&gt;
+
+&lt;P&gt;
+    &lt;b&gt;Python&lt;/b&gt;
+&lt;pre class=&quot;prettyprint&quot;&gt;
+&lt;code&gt;
+
+def inc(x):
+    return x+1;
+
+list=[0,1,2,3,4]
+
+for num in map(inc,list):
+    print(num)
+
+Output:
+1
+2
+3
+4
+5
+&lt;/code&gt;
+&lt;/pre&gt;
+
+&lt;/P&gt;
+
+
+&lt;h2&gt;Reduce&lt;/h2&gt;
+
+&lt;b&gt;Reduce&lt;/b&gt; is similar to Map that it applies a function on the list.
+However unlike Map it does not produce a list.
+It produces a single value as a result of reduction or &lt;a href=&quot;https://en.wikipedia.org/wiki/Fold_(higher-order_function)&quot;&gt;folding process&lt;/a&gt;.
+&lt;p&gt;
+    The operation to be performed should be &lt;a href=&quot;https://en.wikipedia.org/wiki/Associative_property&quot;&gt;associative&lt;/a&gt; to attain correct result. For instance
+    +,* are associative where as / and - are not.
+&lt;/p&gt;
+
+&lt;a href=&quot;../../images/reduce.png&quot;&gt;
+    &lt;p align=&quot;center&quot;&gt;
+        &lt;img  src=&quot;../../images/reduce.png&quot; class=&quot;img-rounded&quot; alt=&quot;Reduce Higher Order Function&quot;/&gt;
+    &lt;/p&gt;
+&lt;/a&gt;
+
+Now that we know what reduction is lets solve a problem.&lt;/br&gt;
+&lt;/br&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;b&gt;Lets add up all numbers in the list.&lt;/b&gt;&lt;/p&gt;
+
+&lt;/br&gt;
+&lt;P&gt;
+    &lt;b&gt;JavaScript&lt;/b&gt;
+&lt;pre class=&quot;prettyprint&quot;&gt;
+&lt;code&gt;
+
+numbers=[1,2,3,4,5]
+numbers.reduce((a,b)=&gt;a+b)
+
+Output: 15
+&lt;/code&gt;
+&lt;/pre&gt;
+
+&lt;/P&gt;
+
+&lt;P&gt;
+    &lt;b&gt;Java&lt;/b&gt;
+&lt;pre class=&quot;prettyprint&quot;&gt;
+&lt;code&gt;
+
+System.out.println(IntStream.range(1,6)
+                .reduce((a,b)-&gt;a+b)
+                .getAsInt());
+
+Output: 15
+&lt;/code&gt;
+&lt;/pre&gt;
+
+&lt;/P&gt;
+
+
+&lt;P&gt;
+    &lt;b&gt;Clojure&lt;/b&gt;
+&lt;pre class=&quot;prettyprint&quot;&gt;
+&lt;code&gt;
+
+(reduce + [1,2,3,4,5])
+
+Output: 15
+
+&lt;/code&gt;
+&lt;/pre&gt;
+
+&lt;/P&gt;
+
+&lt;P&gt;
+    &lt;b&gt;Python&lt;/b&gt;
+&lt;pre class=&quot;prettyprint&quot;&gt;
+&lt;code&gt;
+
+numbers=[1,2,3,4,5]
+reduce(lambda x,y:x+y,numbers)
+
+Output: 15
+&lt;/code&gt;
+&lt;/pre&gt;
+
+&lt;/P&gt;
+
+&lt;h2&gt;Filter&lt;/h2&gt; &lt;b&gt; Filter function&lt;/b&gt;takes a list and returns a list. The filtered list preserves the same order.
+Only elements satisfying a predicate are returned. A Predicate is boolean valued function.
+&lt;/br&gt;
+&lt;/br&gt;
+
+&lt;a href=&quot;../../images/filter.png&quot;&gt;
+    &lt;p align=&quot;center&quot;&gt;
+        &lt;img  src=&quot;../../images/filter.png&quot; class=&quot;img-rounded&quot; alt=&quot;Reduce Higher Order Function&quot;/&gt;
+    &lt;/p&gt;
+&lt;/a&gt;
+
+&lt;/br&gt;
+&lt;/br&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;b&gt;Lets filter out only even numbers from a list.&lt;/b&gt;&lt;/p&gt;
+
+
+&lt;P&gt;
+    &lt;b&gt;JavaScript&lt;/b&gt;
+&lt;pre class=&quot;prettyprint&quot;&gt;
+&lt;code&gt;
+
+list=[0,1,2,3,4,5,6,7,8,9,10]
+list.filter(x=&gt;x%2==0)
+
+Output:[ 0, 2, 4, 6, 8, 10 ]
+
+&lt;/code&gt;
+&lt;/pre&gt;
+
+&lt;/P&gt;
+
+&lt;P&gt;
+    &lt;b&gt;Java&lt;/b&gt;
+&lt;pre class=&quot;prettyprint&quot;&gt;
+&lt;code&gt;
+
+
+IntStream.range(0,10)
+                .filter(x-&gt;x%2==0)
+                .forEach(x-&gt;{
+                    System.out.println(x);
+                });
+Output:
+0
+2
+4
+6
+8
+
+&lt;/code&gt;
+&lt;/pre&gt;
+
+&lt;/P&gt;
+
+
+&lt;P&gt;
+    &lt;b&gt;Clojure&lt;/b&gt;
+&lt;pre class=&quot;prettyprint&quot;&gt;
+&lt;code&gt;
+
+(filter even? (range 0 11))
+Output: (0 2 4 6 8 10)
+&lt;/code&gt;
+&lt;/pre&gt;
+
+&lt;/P&gt;
+
+&lt;P&gt;
+    &lt;b&gt;Python&lt;/b&gt;
+&lt;pre class=&quot;prettyprint&quot;&gt;
+&lt;code&gt;
+
+filter(lambda x:x%2==0,range(0,10))
+
+Output:[0, 2, 4, 6, 8]
+
+&lt;/code&gt;
+&lt;/pre&gt;
+
+I hope you liked the post. Please share your comments.
+
+
+&lt;/p&gt;
+
+
+&lt;div id=&quot;disqus_thread&quot;&gt;&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = &apos;rohitvvvinfo&apos;;
+
+    /* * * DON&apos;T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement(&apos;script&apos;); dsq.type = &apos;text/javascript&apos;; dsq.async = true;
+        dsq.src = &apos;//&apos; + disqus_shortname + &apos;.disqus.com/embed.js&apos;;
+        (document.getElementsByTagName(&apos;head&apos;)[0] || document.getElementsByTagName(&apos;body&apos;)[0]).appendChild(dsq);
+    })();
+&lt;/script&gt;
+&lt;noscript&gt;Please enable JavaScript to view the &lt;a href=&quot;https://disqus.com/?ref_noscript&quot; rel=&quot;nofollow&quot;&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
+
+&lt;!-- end htmlcommentbox.com --&gt;
+
+
+	</description>
+    </item>
     <item>
       <title>How I taught a computer to play Chess</title>
       <link>http://jbake.org/blog/2017/Chess.html</link>
