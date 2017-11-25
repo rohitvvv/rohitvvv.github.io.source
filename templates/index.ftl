@@ -1,5 +1,5 @@
 <#include "header.ftl">
-	
+
 	<#include "menu.ftl">
 
 
@@ -11,11 +11,11 @@
         <#return content>
     </#if>
 </#function>
-     
+
         <!--Conatiner starts-->
         <div class = "container">
 	    <div class="page-header">
-		<h1>01000010011011000110111101100111</h1>
+		<h1>Binary</h1>
 		<a href="http://cirillocompany.de/pages/anti-if">
   <img height="60" width="120"
   src="http://cdn.shopify.com/s/files/1/0257/1675/t/147/assets/banner_ive-joined.gif"
@@ -48,14 +48,13 @@
 	       </div>
 
 	       <!-- Add twitter -->
-	     
 
-	   </div> <!-- Row ends-->  
+
+	   </div> <!-- Row ends-->
            <hr />
-	  
-	 </div>
-	
-	<!--  <p>Older posts are available in the <a href="/${config.archive_file}">archive</a>.</p>-->
-	 <#include "footer.ftl">	  
-	</div><!--Container ends-->
 
+	 </div>
+
+	<!--  <p>Older posts are available in the <a href="/${config.archive_file}">archive</a>.</p>-->
+	 <#include "footer.ftl">
+	</div><!--Container ends-->
